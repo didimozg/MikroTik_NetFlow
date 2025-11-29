@@ -319,3 +319,4 @@ GROUP BY "Local IP"
 ORDER BY "Traffic" DESC
 LIMIT 10
 ```
+<img width="1570" height="604" alt="изображение" src="https://github.com/user-attachments/assets/845376c5-c5ad-4f2c-b328-6620cd49dc1e" />
