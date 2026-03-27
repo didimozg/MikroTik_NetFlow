@@ -1,4 +1,12 @@
-# 📘 Guide: Network Traffic Monitoring (NetFlow)
+# MikroTik NetFlow Monitoring Stack
+
+[![Release](https://img.shields.io/github/v/release/didimozg/mikrotik-netflow?display_name=tag)](https://github.com/didimozg/mikrotik-netflow/releases)
+[![CI](https://img.shields.io/github/actions/workflow/status/didimozg/mikrotik-netflow/ci.yml?branch=main&label=CI)](https://github.com/didimozg/mikrotik-netflow/actions/workflows/ci.yml)
+[![License](https://img.shields.io/github/license/didimozg/mikrotik-netflow)](./LICENSE)
+
+Russian documentation: [README_RU.md](./README_RU.md).
+
+This repository contains a practical deployment guide and installation script for a MikroTik NetFlow monitoring stack based on GoFlow2, Vector, ClickHouse, and Grafana.
 
 ## Phase 1. Server Setup (LXC/Linux)
 
@@ -319,4 +327,4 @@ GROUP BY "Local IP"
 ORDER BY "Traffic" DESC
 LIMIT 10
 ```
-<img width="1570" height="604" alt="изображение" src="https://github.com/user-attachments/assets/845376c5-c5ad-4f2c-b328-6620cd49dc1e" />
+<img width="1570" height="604" alt="screenshot" src="https://github.com/user-attachments/assets/845376c5-c5ad-4f2c-b328-6620cd49dc1e" />

@@ -1,5 +1,7 @@
 # 📘 Инструкция: Мониторинг Трафика (NetFlow)
 
+English documentation: [README.md](./README.md).
+
 **Стек:** MikroTik → GoFlow2 (JSON) → Vector (GeoIP) → ClickHouse → Grafana.
 
 -----
