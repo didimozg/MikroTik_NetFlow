@@ -250,14 +250,14 @@ echo "URL: http://$MY_IP:8123"
 
 ## Phase 2. MikroTik Configuration
 
-Copy and paste these commands into your MikroTik terminal. Replace `SERVER_IP` with the IP address of your LXC container.
+Copy and paste these commands into your MikroTik terminal. Replace the example `192.0.2.20` with the IP address of your LXC container.
 
 ```mikrotik
 # 1. Enable Traffic Flow (30s timeout for live graphs)
 /ip traffic-flow set enabled=yes interfaces=all active-flow-timeout=30s inactive-flow-timeout=15s cache-entries=256k
 
-# 2. Add Target Server (Replace SERVER_IP)
-/ip traffic-flow target add dst-address=SERVER_IP port=2055 version=9
+# 2. Add Target Server (Replace the example 192.0.2.20)
+/ip traffic-flow target add dst-address=192.0.2.20 port=2055 version=9
 ```
 
 -----
@@ -267,7 +267,7 @@ Copy and paste these commands into your MikroTik terminal. Replace `SERVER_IP` w
 ### 1\. Connect Data Source
 
   * **Type:** ClickHouse
-  * **URL:** `http://SERVER_IP:8123`
+  * **URL:** `http://192.0.2.20:8123`
   * **Auth:** User: `default`, Password: (empty).
   * Click **Save & Test**.
 

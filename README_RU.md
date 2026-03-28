@@ -217,15 +217,15 @@ echo "2. NetFlow Server: $MY_IP порт 2055"
 ## Этап 2. Настройка MikroTik
 
 Зайдите в WinBox -\> New Terminal.
-Скопируйте и вставьте (заменив `IP_СЕРВЕРА` на IP вашего LXC):
+Скопируйте и вставьте (заменив пример `192.0.2.20` на IP вашего LXC):
 
 ```mikrotik
 # Включаем Traffic Flow и настраиваем частую отправку (30 сек) для живых графиков
 /ip traffic-flow set enabled=yes interfaces=all active-flow-timeout=30s inactive-flow-timeout=15s cache-entries=256k
 
 # Добавляем сервер-получатель
-# ВАЖНО: Замените IP_СЕРВЕРА на адрес вашего LXC
-/ip traffic-flow target add dst-address=IP_СЕРВЕРА port=2055 version=9
+# ВАЖНО: Замените пример 192.0.2.20 на адрес вашего LXC
+/ip traffic-flow target add dst-address=192.0.2.20 port=2055 version=9
 ```
 
 -----
@@ -235,7 +235,7 @@ echo "2. NetFlow Server: $MY_IP порт 2055"
 ### 1\. Подключите ClickHouse
 
   * **Data Sources** -\> **Add** -\> **ClickHouse**.
-  * **URL:** `http://IP_СЕРВЕРА:8123`
+  * **URL:** `http://192.0.2.20:8123`
   * **Auth:** User: `default`, Password: (пусто).
   * Нажмите **Save & Test**.
 
